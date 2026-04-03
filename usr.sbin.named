@@ -1,0 +1,6 @@
+profile named /usr/sbin/named flags=(attach_disconnected) {
+  ...
+  /var/log/bind/** rw,
+  /var/log/bind/ rw,
+  ...
+}
