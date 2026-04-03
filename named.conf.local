@@ -1,9 +1,9 @@
 zone "labnet.local" {
     type master;
-    file "/etc/bind/zones/db.labnet.local";   # zone file path
+    file "/etc/bind/zones/db.labnet.local";
 };
 
-zone "122.168.192.in-addr.arpa" {
+zone "{{REVERSE_ZONE}}.in-addr.arpa" {
     type master;
-    file "/etc/bind/zones/db.122.168.192";    # 192.168.122.0/24
+    file "/etc/bind/zones/db.{{REVERSE_ZONE}}";
 };
