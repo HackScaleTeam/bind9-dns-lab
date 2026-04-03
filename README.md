@@ -45,7 +45,7 @@ bind9-dns-lab/
 ## Installation
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/HackScaleTeam/bind9-dns-lab.git
 cd bind9-dns-lab
 chmod +x setup-bind9.sh
 ./setup-bind9.sh
