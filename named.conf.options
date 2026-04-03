@@ -1,33 +1,31 @@
 acl "localnet" {
-        192.168.122.0/24;
+    {{NETWORK_PREFIX}}.0/24;
 };
 
-
 options {
-        directory "/var/cache/bind";
+    directory "/var/cache/bind";
 
-        recursion yes;                     # resursive queries
-        allow-recursion { localnet; };     # recursive queries
+    recursion yes;
+    allow-recursion { localnet; };
 
-        listen-on { 192.168.122.185; };    # IP address of the DNS server
-        allow-transfer { none; };          # disable zone transfers
+    listen-on { {{DNS_IP}}; };
+    allow-transfer { none; };
 
-        forwarders {
-                8.8.8.8;
-                8.8.4.4;
-        };
+    forwarders {
+        8.8.8.8;
+        8.8.4.4;
+    };
 
-        dnssec-validation auto;
-
-        listen-on-v6 { any; };
+    dnssec-validation auto;
+    listen-on-v6 { any; };
 };
 
 logging {
-        channel query {
-            file "/var/log/bind/query" versions 5 size 10M;
-            print-time yes;
-            severity info;
-        };
+    channel query {
+        file "/var/log/bind/query" versions 5 size 10M;
+        print-time yes;
+        severity info;
+    };
 
-        category queries { query; };
+    category queries { query; };
 };
