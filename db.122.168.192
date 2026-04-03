@@ -1,15 +1,13 @@
 $TTL    604800
 @       IN      SOA     ns.labnet.local. admin.labnet.local. (
-                              4         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
+                              4
+                         604800
+                          86400
+                        2419200
+                         604800 )
 
-; name servers
-      IN      NS      ns.labnet.local.
+        IN      NS      ns.labnet.local.
 
-; PTR Records
-105   IN      PTR     ns.labnet.local.        ; 192.168.122.185
-160   IN      PTR     target.labnet.local.    ; 192.168.122.160
-111   IN      PTR     sliver.labnet.local.    ; 192.168.122.111
+{{DNS_LAST}}      IN      PTR     ns.labnet.local.
+{{TARGET_LAST}}   IN      PTR     target.labnet.local.
+{{SLIVER_LAST}}   IN      PTR     sliver.labnet.local.
