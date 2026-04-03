@@ -1,6 +1,4 @@
-profile named /usr/sbin/named flags=(attach_disconnected) {
-  ...
-  /var/log/bind/** rw,
-  /var/log/bind/ rw,
-  ...
-}
+# HackScale bind9 lab logging
+/var/log/bind/** rw,
+/var/log/bind/ rw,
+/etc/bind/zones/** r,
