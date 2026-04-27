@@ -14,7 +14,7 @@ echo "[+] Starting BIND9 automated setup..."
 if ! dpkg -l | grep -q "^ii  bind9 "; then
     echo "[+] Installing bind9..."
     sudo apt update
-    sudo apt install -y bind9 bind9utils bind9-dnsutils apparmor-utils
+    sudo apt install -y bind9 bind9utils apparmor-utils
 else
     echo "[+] bind9 already installed"
 fi
